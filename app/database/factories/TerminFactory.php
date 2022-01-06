@@ -16,9 +16,8 @@ class TerminFactory extends Factory
     public function definition()
     {
         return [
-            'adresaLokala'=>$this->faker->address(),
-            
-            'vreme' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'adresaLokala'=>$this->faker->address(),            
+            'vreme' => $this->faker->dateTimeBetween($startDate = '-3 years', $endDate = '+3 years', $timezone = null),
             'kozmeticar_id'=>Kozmeticar::find(random_int(1,Kozmeticar::count())),
             'tretman_id'=> Tretman::find(random_int(1,Tretman::count()))
            
