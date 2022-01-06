@@ -13,7 +13,7 @@ class PreimenujTabeluTretmani extends Migration
      */
     public function up()
     {
-       Schema::rename('tretmen','tretmani');
+       //Schema::rename('tretmen','tretmani');
     }
 
     /**
@@ -23,6 +23,6 @@ class PreimenujTabeluTretmani extends Migration
      */
     public function down()
     {
-        Schema::rename('tretmani','tretmen');
+       // Schema::rename('tretmani','tretmen');
     }
 }
