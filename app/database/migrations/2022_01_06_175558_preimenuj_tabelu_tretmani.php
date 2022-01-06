@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTretmenTable extends Migration
+class PreimenujTabeluTretmani extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,7 @@ class CreateTretmenTable extends Migration
      */
     public function up()
     {
-        Schema::create('tretmen', function (Blueprint $table) {
-            $table->id();
-            $table->string('naziv');
-            $table->string('opis');
-            $table->double("cena");
-
-            $table->timestamps();
-        });
+       Schema::rename('tretmen','tretmani');
     }
 
     /**
@@ -30,6 +23,6 @@ class CreateTretmenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tretmen');
+        Schema::rename('tretmani','tretmen');
     }
 }

@@ -15,6 +15,14 @@ class CreateKozmeticarsTable extends Migration
     {
         Schema::create('kozmeticars', function (Blueprint $table) {
             $table->id();
+            $table->string('ime_prezime');
+            $table->string('email');
+            $table->string('broj_telefona'); 
+            $table->string('nivo_strucne_spreme');
+            $table->string('godine_iskustva');
+
+
+
             $table->timestamps();
         });
     }

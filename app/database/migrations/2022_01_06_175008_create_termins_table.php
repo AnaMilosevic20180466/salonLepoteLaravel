@@ -15,6 +15,12 @@ class CreateTerminsTable extends Migration
     {
         Schema::create('termins', function (Blueprint $table) {
             $table->id();
+            $table->string('adresa');
+            $table->dateTime('vreme');
+            $table->foreignId('kozmeticar_id');
+            $table->foreignId('tretman_id');
+
+
             $table->timestamps();
         });
     }
