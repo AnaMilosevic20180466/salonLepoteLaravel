@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tretman extends Model
 {
     use HasFactory;
+
+    public function termini()
+    {
+        return $this->hasMany(Termin::class);
+    }
 }

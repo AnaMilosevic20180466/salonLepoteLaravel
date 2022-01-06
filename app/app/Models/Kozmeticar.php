@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Kozmeticar extends Model
 {
     use HasFactory;
+
+
+    public function termini()
+    {
+        return $this->hasMany(Termin::class);
+    }
 }
+
+
+
+ 
