@@ -20,12 +20,15 @@ class TretmanSeeder extends Seeder
         $t1->naziv="Masaza";
         $t1->opis="Lorem, ipsum dolor sit amet con ";
         $t1->cena=2999;
+        $t1->vreme=30;
+        
         $t1->save();
 
         $t2 = new Tretman();
         $t2->naziv="Higijenski tretman lica";
         $t2->opis="Lorem, ipsum dolor sit amet con ";
         $t2->cena=4000;
+        $t2->vreme=45;
         $t2->save();
 
 
@@ -33,6 +36,7 @@ class TretmanSeeder extends Seeder
         $t3->naziv="Sportska masaza";
         $t3->opis="Lorem, ipsum dolor sit amet con ";
         $t3->cena=6999;
+        $t3->vreme=60;
         $t3->save();
 
 

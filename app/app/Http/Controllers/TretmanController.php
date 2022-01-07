@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\TretmanResource;
 use App\Models\Tretman;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class TretmanController extends Controller
      */
     public function index()
     {
-        //
+         return TretmanResource::collection(Tretman::all());
     }
 
     /**
@@ -44,9 +45,9 @@ class TretmanController extends Controller
      * @param  \App\Models\Tretman  $tretman
      * @return \Illuminate\Http\Response
      */
-    public function show(Tretman $tretman)
+    public function show($id)
     {
-        //
+        return new TretmanResource(Tretman::find($id));
     }
 
     /**

@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Termin extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'adresaLokala', 
+        'vreme',
+        'kozmeticar_id',
+        'tretman_id'
+
+
+
+    ];
+
 
     public function tretman()
     {
