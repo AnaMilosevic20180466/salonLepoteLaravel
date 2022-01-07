@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TerminController;
+use App\Http\Controllers\TretmanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,14 +25,19 @@ Route::group(['middleware' => ['auth:sanctum']], function () {//ako je korisnik 
         return auth()->user();
     });
  
+    Route::resource('termini', TerminController::class)->only(['update', 'store', 'destroy']);
     
    
 
     Route::post('/logout', [AuthController::class, 'logout']); //ako je korisnik ulogovan moze da se odjavi
 });
-
+//ovo mogu da vide svi korisnici ( i ulogovani i neulogovani)
 Route::get('users',[UserController::class,'index']);
 Route::get('users/{id}',[UserController::class,'show']);
 
 Route::get('termini',[TerminController::class,'index']);
 Route::get('termini/{id}',[TerminController::class,'show']);
+
+
+Route::get('tretmani',[TretmanController::class,'index']);
+Route::get('tretmani/{id}',[TretmanController::class,'show']);
