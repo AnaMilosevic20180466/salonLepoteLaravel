@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Termin;
 use Illuminate\Database\Seeder;
 
 class TerminSeeder extends Seeder
@@ -13,6 +14,6 @@ class TerminSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Termin::factory(10)->create();
     }
 }

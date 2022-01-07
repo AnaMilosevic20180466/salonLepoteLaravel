@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kozmeticar;
 use Illuminate\Database\Seeder;
 
 class KozmeticarSeeder extends Seeder
@@ -13,6 +14,6 @@ class KozmeticarSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Kozmeticar::factory(10)->create();
     }
 }
